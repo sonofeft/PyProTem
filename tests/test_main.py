@@ -1,8 +1,9 @@
 import unittest
 # import unittest2 as unittest # for versions of python < 2.7
 
-import sys
-sys.path.append("../")
+import sys, os
+sys.path.append(os.path.abspath("."))
+sys.path.append(os.path.abspath("../"))
 from pyprotem.main import ProTem
 
 class MyTest(unittest.TestCase):
