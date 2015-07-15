@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>pyProTem &mdash; pyProTem 0.0.1 documentation</title>
+    <title>PyProTem &mdash; PyProTem 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pyProTem 0.0.1 documentation" href="#" />
-    <link rel="next" title="Code Functions" href="functions.html" /> 
+    <link rel="top" title="PyProTem 0.0.1 documentation" href="#" />
+    <link rel="next" title="Project Layout" href="project_layout.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -37,9 +37,9 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="functions.html" title="Code Functions"
+          <a href="project_layout.html" title="Project Layout"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">pyProTem 0.0.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">PyProTem 0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -49,13 +49,15 @@
             </a></p>
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">pyProTem</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_layout.html">Project Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="travis_ci.html">Travis CI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">fulltoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Code Functions</a></li>
 </ul>
 
   <h4>Next topic</h4>
-  <p class="topless"><a href="functions.html"
-                        title="next chapter">Code Functions</a></p>
+  <p class="topless"><a href="project_layout.html"
+                        title="next chapter">Project Layout</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -85,10 +87,56 @@
           <div class="body" role="main">
             
   <div class="section" id="pyprotem">
-<h1>pyProTem<a class="headerlink" href="#pyprotem" title="Permalink to this headline">¶</a></h1>
+<h1>PyProTem<a class="headerlink" href="#pyprotem" title="Permalink to this headline">¶</a></h1>
+<p>PyProTem acts as a temporary project to test tox, travis, futurize, etc.</p>
+<p>The layout is shown below:</p>
+<div class="highlight-python"><div class="highlight"><pre>PyProTem/
+    pyprotem/
+        __init__.py
+        main.py
+    docs/
+    tests/
+        __init__.py
+        test_mycode.py
+    LICENSE.txt
+    MANIFEST.in
+    README.rst
+    requirements.txt
+    setup.cfg
+    setup.py
+    tk_nosy.py
+    tox.ini
+</pre></div>
+</div>
+<p>Use PyProTem to test tox usage locally, travis CI on GitHub on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3.</p>
+<p>PyProTem
+Copyright (C) 2015  Charlie Taylor</p>
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</p>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="project_layout.html">Project Layout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="project_layout.html#test-discovery">Test Discovery</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="travis_ci.html">Travis CI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="travis_ci.html#turning-on-the-travis-ci-switch">Turning on the Travis CI Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="travis_ci.html#test-discovery-wrinkle">Test Discovery Wrinkle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">fulltoc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fulltable_of_contents.html#sphinxcontrib-fulltoc">sphinxcontrib-fulltoc</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">Code Functions</a></li>
 </ul>
 </div>
@@ -118,9 +166,9 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="functions.html" title="Code Functions"
+          <a href="project_layout.html" title="Project Layout"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">pyProTem 0.0.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">PyProTem 0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

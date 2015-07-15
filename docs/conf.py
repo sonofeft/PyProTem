@@ -1,7 +1,7 @@
 
 # -*- coding: utf-8 -*-
 #
-# pyProTem documentation build configuration file, created by
+# PyProTem documentation build configuration file, created by
 # sphinx-quickstart on Mon Jul 06 00:15:47 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -37,6 +37,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
+    'sphinxcontrib.fulltoc'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -54,7 +55,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'pyProTem'
+project = u'PyProTem'
 copyright = u'2015, Charlie Taylor'
 author = u'Charlie Taylor'
 
@@ -208,7 +209,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pyProTemdoc'
+htmlhelp_basename = 'PyProTemdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -230,7 +231,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'pyProTem.tex', u'pyProTem Documentation',
+  (master_doc, 'PyProTem.tex', u'PyProTem Documentation',
    u'Charlie Taylor', 'manual'),
 ]
 
@@ -260,7 +261,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'projectabcxyz', u'pyProTem Documentation',
+    (master_doc, 'projectabcxyz', u'PyProTem Documentation',
      [author], 1)
 ]
 
@@ -274,8 +275,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'pyProTem', u'pyProTem Documentation',
-   author, 'pyProTem', 'One line description of project.',
+  (master_doc, 'PyProTem', u'PyProTem Documentation',
+   author, 'PyProTem', 'One line description of project.',
    'Miscellaneous'),
 ]
 

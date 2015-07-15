@@ -2,7 +2,7 @@
 # -*- coding: ascii -*-
 
 r"""
-pyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.
+PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.
 
 <Paragraph description see docstrings at http://www.python.org/dev/peps/pep-0257/>
 Testing the layout shown below::
@@ -10,7 +10,7 @@ Testing the layout shown below::
     MyProject/
         myproject/
             __init__.py
-            mycode.py
+            main.py
         docs/
         tests/
             __init__.py
@@ -24,10 +24,10 @@ Testing the layout shown below::
         tk_nosy.py
         tox.ini
 
-Use pyProTem to test tox usage locally, travis CI on GitHub on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3.
+Use PyProTem to test tox usage locally, travis CI on GitHub on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3.
 
 
-pyProTem
+PyProTem
 Copyright (C) 2015  Charlie Taylor
 
 This program is free software: you can redistribute it and/or modify
@@ -62,7 +62,7 @@ __status__ = "Development" # "Prototype", "Development", or "Production"
 #
 
 class ProTem(object):
-    """pyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.
+    """PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.
 
     Longer class information....
     Longer class information....

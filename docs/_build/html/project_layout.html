@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Python Module Index &mdash; PyProTem 0.0.1 documentation</title>
+    <title>Project Layout &mdash; PyProTem 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,9 +24,8 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="PyProTem 0.0.1 documentation" href="index.html" />
- 
-
-
+    <link rel="next" title="Travis CI" href="travis_ci.html" />
+    <link rel="prev" title="PyProTem" href="index.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -36,8 +35,14 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="#" title="Python Module Index"
+          <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="travis_ci.html" title="Travis CI"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="PyProTem"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
@@ -47,13 +52,29 @@
               <img class="logo" src="_static/PythonSphinxlogo.png" alt="Logo"/>
             </a></p>
   <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li class="toctree-l1"><a class="reference internal" href="project_layout.html">Project Layout</a></li>
+  <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Project Layout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#test-discovery">Test Discovery</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="travis_ci.html">Travis CI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">fulltoc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">Code Functions</a></li>
 </ul>
 
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">PyProTem</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="travis_ci.html"
+                        title="next chapter">Travis CI</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/project_layout.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
@@ -75,29 +96,32 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-
-   <h1>Python Module Index</h1>
-
-   <div class="modindex-jumpbox">
-   <a href="#cap-p"><strong>p</strong></a>
-   </div>
-
-   <table class="indextable modindextable" cellspacing="0" cellpadding="2">
-     <tr class="pcap"><td></td><td>&nbsp;</td><td></td></tr>
-     <tr class="cap" id="cap-p"><td></td><td>
-       <strong>p</strong></td><td></td></tr>
-     <tr>
-       <td><img src="_static/minus.png" class="toggler"
-              id="toggle-1" style="display: none" alt="-" /></td>
-       <td>
-       <code class="xref">pyprotem</code></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="functions.html#module-pyprotem.main"><code class="xref">pyprotem.main</code></a></td><td>
-       <em></em></td></tr>
-   </table>
+  <div class="section" id="project-layout">
+<h1>Project Layout<a class="headerlink" href="#project-layout" title="Permalink to this headline">¶</a></h1>
+<p>The PyProTem project layout is shown below:</p>
+<div class="highlight-python"><div class="highlight"><pre>PyProTem/
+    pyprotem/
+        __init__.py
+        main.py
+    docs/
+    tests/
+        __init__.py
+        test_mycode.py
+    LICENSE.txt
+    MANIFEST.in
+    README.rst
+    requirements.txt
+    setup.cfg
+    setup.py
+    tk_nosy.py
+    tox.ini
+</pre></div>
+</div>
+<div class="section" id="test-discovery">
+<h2>Test Discovery<a class="headerlink" href="#test-discovery" title="Permalink to this headline">¶</a></h2>
+<p>Because of the layout, the unit tests in need to know the path to the pyprotem/ directory in order to import</p>
+</div>
+</div>
 
 
           </div>
@@ -112,8 +136,14 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="#" title="Python Module Index"
+          <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="travis_ci.html" title="Travis CI"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="PyProTem"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
