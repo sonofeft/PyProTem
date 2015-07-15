@@ -96,7 +96,7 @@ class ProTem(object):
         
         .. warning:: blabla arg2 must be non-zero.
         
-        .. todo:: blabla  lots to do
+        .. todo:: blabla  many miles to go
         """
         pass
 
