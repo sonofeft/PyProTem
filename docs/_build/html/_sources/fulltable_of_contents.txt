@@ -1,7 +1,7 @@
 .. fulltable_of_contents
 
-fulltoc
-=======
+Full Table of Contents
+======================
 
 Using Sphinx package for full table of contents
 

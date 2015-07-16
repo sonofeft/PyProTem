@@ -118,7 +118,20 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinxdoc'
+#html_theme = 'classic' # looks good, but dated (has left sidebar)
+#html_theme = 'sphinxdoc' # nice, but no options. right sidebar only.
+#html_theme = 'alabaster' # nice. a little plain, but uncluttered.
+
+#html_theme = 'sphinx_rtd_theme' # fails with fulltoc
+#html_theme = 'scrolls' # looks good, but navigation limited w/o fulltoc
+#html_theme = 'agogo' # looks good, only has right sidebar
+#html_theme = 'traditional' # right sidebar only
+#html_theme = 'haiku' # navigation is tough, but look is good
+#html_theme = 'nature' # OK
+#html_theme = 'pyramid' # it's nice
+html_theme = 'bizstyle' # I like it. a little garish, but I like it.
+#html_theme = 'default' # same as classic
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

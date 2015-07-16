@@ -1,5 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<!doctype html>
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,7 +9,7 @@
     
     <title>Project Layout &mdash; PyProTem 0.0.1 documentation</title>
     
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -23,9 +24,14 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="top" title="PyProTem 0.0.1 documentation" href="index.html" />
     <link rel="next" title="Read the Docs" href="read_the_docs.html" />
-    <link rel="prev" title="PyProTem" href="index.html" /> 
+    <link rel="prev" title="PyProTem" href="index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -59,7 +65,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="read_the_docs.html">Read the Docs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="travis_ci.html">Travis CI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">fulltoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">Full Table of Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">Code Functions</a></li>
 </ul>
 
@@ -125,8 +131,8 @@
 <div class="section" id="test-discovery">
 <h2>Test Discovery<a class="headerlink" href="#test-discovery" title="Permalink to this headline">¶</a></h2>
 <p>Because of the layout, the unit tests need to be told the path to the pyprotem/ directory.</p>
-<p>Test discovery between nosetests and py.test seemed to be different with Travis CI.</p>
-<p>With nosetests, it was enough to add to the search path at the beginning of the unittest file:</p>
+<p>Test discovery between nosetests and py.test seemed to be different with Travis CI. The directory in which the test file executes appears to be different between nosetests and  py.test.</p>
+<p>With nosetests, it was enough to add to the search path at the beginning of the unittest file (test_mycode.py in subdirectory tests/):</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">&quot;../&quot;</span><span class="p">))</span>
 </pre></div>
 </div>

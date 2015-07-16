@@ -1,5 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<!doctype html>
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,7 +9,7 @@
     
     <title>Travis CI &mdash; PyProTem 0.0.1 documentation</title>
     
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -23,9 +24,14 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="top" title="PyProTem 0.0.1 documentation" href="index.html" />
-    <link rel="next" title="fulltoc" href="fulltable_of_contents.html" />
-    <link rel="prev" title="Read the Docs" href="read_the_docs.html" /> 
+    <link rel="next" title="Full Table of Contents" href="fulltable_of_contents.html" />
+    <link rel="prev" title="Read the Docs" href="read_the_docs.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -38,7 +44,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="fulltable_of_contents.html" title="fulltoc"
+          <a href="fulltable_of_contents.html" title="Full Table of Contents"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="read_the_docs.html" title="Read the Docs"
@@ -60,7 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#test-discovery-wrinkle">Test Discovery Wrinkle</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">fulltoc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">Full Table of Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="functions.html">Code Functions</a></li>
 </ul>
 
@@ -69,7 +75,7 @@
                         title="previous chapter">Read the Docs</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="fulltable_of_contents.html"
-                        title="next chapter">fulltoc</a></p>
+                        title="next chapter">Full Table of Contents</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -123,7 +129,8 @@ script:
 </div>
 <div class="section" id="test-discovery-wrinkle">
 <h2>Test Discovery Wrinkle<a class="headerlink" href="#test-discovery-wrinkle" title="Permalink to this headline">¶</a></h2>
-<p>The only wrinkle was a difference in test discovery between nosetests and py.test.  With nosetests, it was enough to add to the search path at the beginning of the unittest file:</p>
+<p>The only wrinkle was a difference in test discovery between nosetests and py.test.  The directory in which the test file executes appears to be different between the two.</p>
+<p>With nosetests, it was enough to add to the search path at the beginning of the unittest file:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">&quot;../&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -156,7 +163,7 @@ script:
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="fulltable_of_contents.html" title="fulltoc"
+          <a href="fulltable_of_contents.html" title="Full Table of Contents"
              >next</a> |</li>
         <li class="right" >
           <a href="read_the_docs.html" title="Read the Docs"

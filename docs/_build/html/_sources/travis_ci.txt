@@ -37,7 +37,9 @@ I recieved an email after synching the file with GitHub that the above tests wer
 Test Discovery Wrinkle
 ----------------------
 
-The only wrinkle was a difference in test discovery between nosetests and py.test.  With nosetests, it was enough to add to the search path at the beginning of the unittest file::
+The only wrinkle was a difference in test discovery between nosetests and py.test.  The directory in which the test file executes appears to be different between the two.
+
+With nosetests, it was enough to add to the search path at the beginning of the unittest file::
 
     sys.path.append(os.path.abspath("../"))
     
