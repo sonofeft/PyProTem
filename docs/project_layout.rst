@@ -49,7 +49,7 @@ Because of the layout, the unit tests need to be told the path to the pyprotem/ 
 
 Test discovery between nosetests and py.test seemed to be different with Travis CI.  
 
-With nosetests, it was enough to add to the search path at the beginning of the unittest file::
+With nosetests, it was enough to add to the search path at the beginning of the unittest file (test_mycode.py in subdirectory tests/)::
 
     sys.path.append(os.path.abspath("../"))
     

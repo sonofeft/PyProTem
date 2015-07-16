@@ -10,6 +10,8 @@ Project Layout
 
 .. _Travis CI: http://docs.travis-ci.com
 .. _GitHub: https://github.com/
+.. _tox automation: https://testrun.org/tox/latest/
+.. _PyPy: http://pypy.org/
 
 PyProTem acts as a temporary project to test tox, travis, futurize, etc. using GitHub for source code control.
 
@@ -33,7 +35,11 @@ The PyProTem project layout is shown below::
         tox.ini
 
 
-Use PyProTem to test tox usage locally, `Travis CI`_ on GitHub_ on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3 and documentation using `Read the docs`_ created by Sphinx_ using reStructuredText_.
+Use PyProTem to test `tox automation`_ usage locally and `Travis CI`_ on GitHub_. The goal is to operate with python 2, 3 and PyPy_.
+
+tk_nosy.py is included as a helper tool that watches local files, detects changes and runs nosetests when changes are detected.  For Test Driven Development (TDD), this is a desirable workflow.
+
+The documentation of PyProTem is hosted on `Read the docs`_.  It is created by Sphinx_ using reStructuredText_ and linked to the GitHub repository.  Whenever the RST files change on GitHub, the docs are updated on `Read the docs`_.
 
 
 Test Discovery

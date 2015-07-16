@@ -4,7 +4,6 @@
 r"""
 PyProTem acts as a temporary project to test tox, travis, futurize, etc.
 
-<Paragraph description see docstrings at http://www.python.org/dev/peps/pep-0257/>
 Testing the layout shown below::
 
     MyProject/
@@ -43,6 +42,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+---------------------
 """
 
 # for multi-file projects see LICENSE file for authorship info
