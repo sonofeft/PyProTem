@@ -54,6 +54,7 @@ Contents:
    :maxdepth: 2
 
    project_layout
+   read_the_docs
    travis_ci
    fulltable_of_contents
    functions
