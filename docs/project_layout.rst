@@ -26,8 +26,7 @@ The PyProTem project layout is shown below::
 Test Discovery
 --------------
 
-Because of the layout, the unit tests in need to know the path to the pyprotem/ directory in order to import from pyprotem.
-
+Because of the layout, the unit tests need to be told the path to the pyprotem/ directory.
 
 Test discovery between nosetests and py.test seemed to be different with Travis CI.  
 
