@@ -120,7 +120,22 @@
 </div>
 <div class="section" id="test-discovery">
 <h2>Test Discovery<a class="headerlink" href="#test-discovery" title="Permalink to this headline">¶</a></h2>
-<p>Because of the layout, the unit tests in need to know the path to the pyprotem/ directory in order to import</p>
+<p>Because of the layout, the unit tests in need to know the path to the pyprotem/ directory in order to import from pyprotem.</p>
+<p>Test discovery between nosetests and py.test seemed to be different with Travis CI.</p>
+<p>With nosetests, it was enough to add to the search path at the beginning of the unittest file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">&quot;../&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>With py.test it was necessary to add:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>So now to be independent of testing software I add both at the beginning:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">))</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">&quot;../&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 </div>
 

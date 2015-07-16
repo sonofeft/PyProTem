@@ -58,6 +58,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#from-github-rtfd">From github rtfd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#documentation-for-rtd">Documentation for RTD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quickstart-for-github-hosted-projects">Quickstart for GitHub-Hosted Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-sphinx-extensions">Using Sphinx extensions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="travis_ci.html">Travis CI</a></li>
@@ -132,6 +133,40 @@ select Git as your repository type.</li>
 <li>Check the &#8220;Active&#8221; setting and click &#8220;Update Settings&#8221;.</li>
 <li>All done.  Commit away and your project will auto-update.</li>
 </ol>
+</div>
+<div class="section" id="using-sphinx-extensions">
+<h2>Using Sphinx extensions<a class="headerlink" href="#using-sphinx-extensions" title="Permalink to this headline">¶</a></h2>
+<p>I am using the <a class="reference external" href="http://sphinxcontrib-fulltoc.readthedocs.org/en/latest/">sphinxcontrib-fulltoc</a> extension to build my docs and ReadTheDocs kept failing with:</p>
+<div class="highlight-python"><div class="highlight"><pre>ExtensionError: Could not import extension sphinxcontrib.fulltoc
+</pre></div>
+</div>
+<p>To solve the problem, I placed the fulltoc.py file from the ../Lib/site-packages/sphinxcontrib subdirectory into the docs/ GitHub subdirectory right next to conf.py.  It was then necessary to modify conf.py to use the local name of &#8220;fulltoc&#8221; instead of the full import path of &#8220;sphinxcontrib.fulltoc&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;../&quot;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">)</span>  <span class="c"># Needed to find fulltoc</span>
+
+<span class="c"># If extensions (or modules to document with autodoc) are in another directory,</span>
+<span class="c"># add these directories to sys.path here. If the directory is relative to the</span>
+<span class="c"># documentation root, use os.path.abspath to make it absolute, like shown here.</span>
+<span class="c">#sys.path.insert(0, os.path.abspath(&#39;.&#39;))</span>
+
+<span class="c"># -- General configuration ------------------------------------------------</span>
+
+<span class="c"># If your documentation needs a minimal Sphinx version, state it here.</span>
+<span class="c">#needs_sphinx = &#39;1.0&#39;</span>
+
+<span class="c"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c"># ones.</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>
+    <span class="s">&#39;sphinx.ext.intersphinx&#39;</span><span class="p">,</span>
+    <span class="s">&#39;sphinx.ext.todo&#39;</span><span class="p">,</span>
+    <span class="s">&#39;sphinx.ext.ifconfig&#39;</span><span class="p">,</span>
+    <span class="s">&#39;fulltoc&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>I tried to modify my requirements.txt file to include <a class="reference external" href="http://sphinxcontrib-fulltoc.readthedocs.org/en/latest/">sphinxcontrib-fulltoc</a>, but it never worked out for me.</p>
 </div>
 </div>
 

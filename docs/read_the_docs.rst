@@ -60,4 +60,40 @@ when you push to GitHub.
 #. All done.  Commit away and your project will auto-update.
 
 
+Using Sphinx extensions
+-----------------------
+
+.. _sphinxcontrib-fulltoc: http://sphinxcontrib-fulltoc.readthedocs.org/en/latest/
+
+I am using the `sphinxcontrib-fulltoc`_ extension to build my docs and ReadTheDocs kept failing with::
+
+   ExtensionError: Could not import extension sphinxcontrib.fulltoc
+   
+To solve the problem, I placed the fulltoc.py file from the ../Lib/site-packages/sphinxcontrib subdirectory into the docs/ GitHub subdirectory right next to conf.py.  It was then necessary to modify conf.py to use the local name of "fulltoc" instead of the full import path of "sphinxcontrib.fulltoc"::
+
+    sys.path.append("../")
+    sys.path.append(".")  # Needed to find fulltoc
+
+    # If extensions (or modules to document with autodoc) are in another directory,
+    # add these directories to sys.path here. If the directory is relative to the
+    # documentation root, use os.path.abspath to make it absolute, like shown here.
+    #sys.path.insert(0, os.path.abspath('.'))
+
+    # -- General configuration ------------------------------------------------
+
+    # If your documentation needs a minimal Sphinx version, state it here.
+    #needs_sphinx = '1.0'
+
+    # Add any Sphinx extension module names here, as strings. They can be
+    # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+    # ones.
+    extensions = [
+        'sphinx.ext.autodoc',
+        'sphinx.ext.intersphinx',
+        'sphinx.ext.todo',
+        'sphinx.ext.ifconfig',
+        'fulltoc'
+    ]
+
+I tried to modify my requirements.txt file to include `sphinxcontrib-fulltoc`_, but it never worked out for me.
 
