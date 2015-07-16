@@ -2,7 +2,7 @@
 # -*- coding: ascii -*-
 
 r"""
-PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.
+PyProTem acts as a temporary project to test tox, travis, futurize, etc.
 
 <Paragraph description see docstrings at http://www.python.org/dev/peps/pep-0257/>
 Testing the layout shown below::

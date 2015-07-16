@@ -4,6 +4,15 @@
 Project Layout
 ==============
 
+.. _Read the docs: http://readthedocs.org/
+.. _Sphinx: http://sphinx.pocoo.org/
+.. _reStructuredText: http://sphinx.pocoo.org/rest.html
+
+.. _Travis CI: http://docs.travis-ci.com
+.. _GitHub: https://github.com/
+
+PyProTem acts as a temporary project to test tox, travis, futurize, etc. using GitHub for source code control.
+
 The PyProTem project layout is shown below::
 
     PyProTem/
@@ -22,6 +31,10 @@ The PyProTem project layout is shown below::
         setup.py
         tk_nosy.py
         tox.ini
+
+
+Use PyProTem to test tox usage locally, `Travis CI`_ on GitHub_ on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3 and documentation using `Read the docs`_ created by Sphinx_ using reStructuredText_.
+
 
 Test Discovery
 --------------
