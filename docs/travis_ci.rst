@@ -1,5 +1,7 @@
 .. travis_ci
 
+.. _internal_travis_ci:
+
 Travis CI
 =========
 

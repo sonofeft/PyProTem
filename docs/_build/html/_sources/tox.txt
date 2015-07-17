@@ -5,11 +5,11 @@ tox automation
 
 .. _tox: https://tox.readthedocs.org/en/latest/
 
-.. _Travis CI: ./travis_ci.html
+
 
 tox_ automates and standardizes testing in Python.  It is great because it will test many different python versions on Windows and Linux (CPython-2.6, 2.7, 3.3, 3.4, Jython, pypy, etc.).  For python code aiming to support python 2 and 3 on Windows and Linux it is an excellent approach.
 
-My workflow is to develop on Windows, run tox_ there and when satisfied, push to GitHub which automatically runs `Travis CI`_ on Linux (i.e. `Travis CI`_ runs different versions of python on Linux machines). This approach verifies python 2 and 3 on Windows and Linux.
+My workflow is to develop on Windows, run tox_ there and when satisfied, push to GitHub which automatically runs :ref:`internal_travis_ci` on Linux (i.e. :ref:`internal_travis_ci` runs different versions of python on Linux machines). This approach verifies python 2 and 3 on Windows and Linux.
 
 If not already intalled, then install tox_ with ``pip install tox`` or perhaps ``sudo apt-get install python-tox`` on Linux.
 
