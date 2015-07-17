@@ -1,0 +1,198 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>tox automation &mdash; PyProTem 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="PyProTem 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Travis CI" href="travis_ci.html" />
+    <link rel="prev" title="Read the Docs" href="read_the_docs.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="travis_ci.html" title="Travis CI"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="read_the_docs.html" title="Read the Docs"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/PythonSphinxlogo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="project_layout.html">Project Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="read_the_docs.html">Read the Docs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">tox automation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#onlinux">OnLinux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#on-windows">On Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="travis_ci.html">Travis CI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">Full Table of Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Code Functions</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="read_the_docs.html"
+                        title="previous chapter">Read the Docs</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="travis_ci.html"
+                        title="next chapter">Travis CI</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tox.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tox-automation">
+<h1>tox automation<a class="headerlink" href="#tox-automation" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://tox.readthedocs.org/en/latest/">tox</a> automates and standardizes testing in Python.  It is great because it will test many different python versions on Windows and Linux (CPython-2.6, 2.7, 3.3, 3.4, Jython, pypy, etc.).  For python code aiming to support python 2 and 3 on Windows and Linux it is an excellent approach.</p>
+<p>My workflow is to develop on Windows, run <a class="reference external" href="https://tox.readthedocs.org/en/latest/">tox</a> there and when satisfied, push to GitHub which automatically runs <a class="reference external" href="./travis_ci.html">Travis CI</a> on Linux (i.e. <a class="reference external" href="./travis_ci.html">Travis CI</a> runs different versions of python on Linux machines). This approach verifies python 2 and 3 on Windows and Linux.</p>
+<p>If not already intalled, then install <a class="reference external" href="https://tox.readthedocs.org/en/latest/">tox</a> with <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">tox</span></code> or perhaps <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python-tox</span></code> on Linux.</p>
+<div class="section" id="onlinux">
+<h2>OnLinux<a class="headerlink" href="#onlinux" title="Permalink to this headline">¶</a></h2>
+<p>On Linux a simple tox.ini file should work such as:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># content of: tox.ini , put in same dir as setup.py</span>
+<span class="p">[</span><span class="n">tox</span><span class="p">]</span>
+<span class="n">envlist</span> <span class="o">=</span> <span class="n">py26</span><span class="p">,</span><span class="n">py27</span>
+<span class="p">[</span><span class="n">testenv</span><span class="p">]</span>
+<span class="n">deps</span><span class="o">=</span><span class="n">pytest</span>       <span class="c"># install pytest in the venvs</span>
+<span class="n">commands</span><span class="o">=</span><span class="n">py</span><span class="o">.</span><span class="n">test</span>  <span class="c"># or &#39;nosetests&#39; or ...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="on-windows">
+<h2>On Windows<a class="headerlink" href="#on-windows" title="Permalink to this headline">¶</a></h2>
+<p>On Windows 8 I had more fiddling around to do, but still had good luck with the following tox.ini file:</p>
+<div class="highlight-python"><div class="highlight"><pre># content of: tox.ini , put in same dir as setup.py
+[tox]
+envlist = py27,py34
+setenv =
+    PYTHONPATH = C:\python34
+    PATH = C:\python34;C:\python34\Scripts
+
+[testenv]
+deps=pytest       # PYPI package providing py.test
+commands=py.test  # or &#39;nosetests&#39; or ...
+
+# python25 may not work... ONLY worked on virtual XP machine (so far)
+[testenv:py25]
+basepython=D:\TOX\python25\python.exe
+
+[testenv:py26]
+basepython=D:\TOX\python26\python.exe
+
+[testenv:py27]
+basepython=D:\TOX\python27\python.exe
+
+[testenv:py32]
+basepython=D:\TOX\python32\python.exe
+
+[testenv:py33]
+basepython=D:\TOX\python33\python.exe
+
+[testenv:py34]
+basepython=C:\python34\python.exe
+
+
+[testenv:pypy3]
+basepython=D:\TOX\pypy3-2.4.0-win32\pypy.exe
+
+[testenv:pypy]
+basepython=D:\TOX\pypy-2.6.0-win32\pypy.exe
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="travis_ci.html" title="Travis CI"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="read_the_docs.html" title="Read the Docs"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Charlie Taylor.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

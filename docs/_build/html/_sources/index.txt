@@ -55,6 +55,7 @@ Contents:
 
    project_layout
    read_the_docs
+   tox
    travis_ci
    fulltable_of_contents
    functions
