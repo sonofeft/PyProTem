@@ -2,6 +2,7 @@
 ## Eclipse
 #################
 
+.pypirc
 *.pydevproject
 .project
 .metadata

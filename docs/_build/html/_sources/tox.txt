@@ -13,8 +13,10 @@ My workflow is to develop on Windows, run tox_ there and when satisfied, push to
 
 If not already intalled, then install tox_ with ``pip install tox`` or perhaps ``sudo apt-get install python-tox`` on Linux.
 
-OnLinux
--------
+``pip`` is likely already on you system, however, if not see :ref:`internal_pip_installation`
+
+On Linux
+--------
 
 On Linux a simple tox.ini file should work such as::
 

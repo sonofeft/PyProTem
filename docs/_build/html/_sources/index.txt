@@ -30,6 +30,42 @@ The layout is shown below::
 
 Use PyProTem to test tox usage locally, travis CI on GitHub on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3.
 
+Installation From Source
+========================
+
+If installing from source, then
+the best way to install PyProTem is to use pip after navigating to the directory holding PyProTem::
+
+    cd full/path/to/PyProTem
+    pip install -e .
+    
+    OR on Linux
+    sudo pip install -e .
+    
+    
+This will execute the local ``setup.py`` file and insure that the pip-specific commands in ``setup.py`` are run.
+
+May need to install from requirements.txt if the above does not work::
+
+    pip install -r /path/to/requirements.txt
+
+
+For installing tkinter, I could never get pip to work on Linux, so use the following::
+
+  sudo apt-get install python-tk
+  sudo apt-get install python3-tk
+  
+  sudo apt-get install python-nose
+  sudo apt-get install python3-nose
+  
+Python 3 on Linux
+-----------------
+
+
+
+
+Copyright
+=========
 
 PyProTem
 Copyright (C) 2015  Charlie Taylor
@@ -56,6 +92,7 @@ Contents:
    project_layout
    read_the_docs
    tox
+   pip
    travis_ci
    fulltable_of_contents
    functions

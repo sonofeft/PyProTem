@@ -1,0 +1,251 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pip Installation &mdash; PyProTem 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="PyProTem 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Travis CI" href="travis_ci.html" />
+    <link rel="prev" title="tox automation" href="tox.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="travis_ci.html" title="Travis CI"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tox.html" title="tox automation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/PythonSphinxlogo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="project_layout.html">Project Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="read_the_docs.html">Read the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tox.html">tox automation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">pip Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-os-support">Python &amp; OS Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pip-included-with-python">pip included with Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-pip">Install pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upgrade-pip">Upgrade pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-os-package-managers">Using OS Package Managers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="travis_ci.html">Travis CI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">Full Table of Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Code Functions</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tox.html"
+                        title="previous chapter">tox automation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="travis_ci.html"
+                        title="next chapter">Travis CI</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pip.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pip-installation">
+<span id="internal-pip-installation"></span><h1>pip Installation<a class="headerlink" href="#pip-installation" title="Permalink to this headline">¶</a></h1>
+<p>See <a class="reference external" href="https://pip.pypa.io/en/latest/installing.html">https://pip.pypa.io/en/latest/installing.html</a> for full description of pip installation.  The contents of that page on 7/25/2015 are pasted below.</p>
+<div class="section" id="python-os-support">
+<h2>Python &amp; OS Support<a class="headerlink" href="#python-os-support" title="Permalink to this headline">¶</a></h2>
+<p>pip works with CPython versions 2.6, 2.7, 3.2, 3.3, 3.4 and also pypy.</p>
+<p>pip works on Unix/Linux, OS X, and Windows.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Python 2.5 was supported through v1.3.1, and Python 2.4 was supported through v1.1.</p>
+</div>
+</div>
+<div class="section" id="pip-included-with-python">
+<h2>pip included with Python<a class="headerlink" href="#pip-included-with-python" title="Permalink to this headline">¶</a></h2>
+<p>Python 2.7.9 and later (on the python2 series), and Python 3.4
+and later include pip by default <a class="footnote-reference" href="#id6" id="id1">[1]</a>, so you may have pip already.</p>
+</div>
+<div class="section" id="install-pip">
+<span id="get-pip"></span><h2>Install pip<a class="headerlink" href="#install-pip" title="Permalink to this headline">¶</a></h2>
+<p>To install pip, securely download <a class="reference external" href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a>. <a class="footnote-reference" href="#id7" id="id2">[2]</a></p>
+<p>Then run the following (which may require administrator access):</p>
+<div class="highlight-python"><div class="highlight"><pre>python get-pip.py
+</pre></div>
+</div>
+<p>If <a class="reference external" href="https://pypi.python.org/pypi/setuptools">setuptools</a> is not already installed, <code class="docutils literal"><span class="pre">get-pip.py</span></code> will install
+<a class="reference external" href="https://pypi.python.org/pypi/setuptools">setuptools</a> for you. <a class="footnote-reference" href="#id8" id="id3">[3]</a></p>
+<p>To upgrade an existing <a class="reference external" href="https://pypi.python.org/pypi/setuptools">setuptools</a>, run <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">setuptools</span></code>.</p>
+<blockquote>
+<div></div></blockquote>
+<p>Additionally, <code class="docutils literal"><span class="pre">get-pip.py</span></code> supports using the <a class="reference external" href="https://pip.pypa.io/en/latest/reference/pip_install.html#pip-install-options">pip install options</a> and the <a class="reference external" href="https://pip.pypa.io/en/latest/reference/pip.html#general-options">general options</a>. Below are
+some examples:</p>
+<p>Install from local copies of pip and setuptools:</p>
+<div class="highlight-python"><div class="highlight"><pre>python get-pip.py --no-index --find-links=/local/copies
+</pre></div>
+</div>
+<p>Install to the user site <a class="footnote-reference" href="#id9" id="id4">[4]</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>python get-pip.py --user
+</pre></div>
+</div>
+<p>Install behind a proxy:</p>
+<div class="highlight-python"><div class="highlight"><pre>python get-pip.py --proxy=&quot;[user:passwd@]proxy.server:port&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="upgrade-pip">
+<h2>Upgrade pip<a class="headerlink" href="#upgrade-pip" title="Permalink to this headline">¶</a></h2>
+<p>On Linux or OS X:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install -U pip
+</pre></div>
+</div>
+<p>On Windows <a class="footnote-reference" href="#id10" id="id5">[5]</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>python -m pip install -U pip
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-os-package-managers">
+<h2>Using OS Package Managers<a class="headerlink" href="#using-os-package-managers" title="Permalink to this headline">¶</a></h2>
+<p>On Linux, pip will generally be available for the system install of python using
+the system package manager, although often the latest version will be
+unavailable.</p>
+<p>On Debian and Ubuntu:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-pip
+sudo apt-get install python3-pip
+</pre></div>
+</div>
+<p>On Fedora:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install python-pip
+sudo yum install python3-pip
+</pre></div>
+</div>
+<hr class="docutils" />
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="https://docs.python.org/3/installing/">https://docs.python.org/3/installing/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>&#8220;Secure&#8221; in this context means using a modern browser or a
+tool like <cite>curl</cite> that verifies SSL certificates when downloading from
+https URLs.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>Beginning with pip v1.5.1, <code class="docutils literal"><span class="pre">get-pip.py</span></code> stopped requiring setuptools to
+be installed first.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>The pip developers are considering making <code class="docutils literal"><span class="pre">--user</span></code> the default for all
+installs, including <code class="docutils literal"><span class="pre">get-pip.py</span></code> installs of pip, but at this time,
+<code class="docutils literal"><span class="pre">--user</span></code> installs for pip itself, should not be considered to be fully
+tested or endorsed. For discussion, see <a class="reference external" href="https://github.com/pypa/pip/issues/1668">Issue 1668</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td><a class="reference external" href="https://github.com/pypa/pip/issues/1299">https://github.com/pypa/pip/issues/1299</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="travis_ci.html" title="Travis CI"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tox.html" title="tox automation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Charlie Taylor.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

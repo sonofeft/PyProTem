@@ -22,14 +22,14 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='pyProTem',
+    name='pyprotem',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     version='0.1.1',
 
-    description='pyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.',
+    description='PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.',
     long_description=long_description,
 
     # The project's main homepage.
@@ -37,7 +37,7 @@ setup(
 
     # Author details
     author='Charlie Taylor',
-    author_email='charlietaylor@users.sourceforge.net',
+    author_email='cet@appliedpython.com',
 
     # license
     license='GPL-3',
@@ -77,11 +77,14 @@ setup(
     platforms='any',
 
     # What does your project relate to?
-    keywords='pyprotem setuptools development',
+    keywords='pyprotem setuptools development tox travisci nose nosetests',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
-    packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
+    
+    packages=find_packages('pyprotem', 
+        exclude=['.tox', '.hg', 'docs', 'tests', '*.rst']),
+    package_dir = {'pyprotem':''},
 
     # List run-time dependencies here.  These will be installed by pip when
     # your project is installed. For an analysis of "install_requires" vs pip's
@@ -92,7 +95,7 @@ setup(
     #    "quantum-gravity>=1.0",
     #    "unobtanium>=0.4",
     #],
-    install_requires=[],
+    install_requires=['future'],
 
     tests_require=['pytest'],
 
@@ -121,6 +124,15 @@ setup(
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
+
+    # If installing from source, then
+    # the best way to install PyProTem is to use pip after navigating to the source directory
+
+    #     cd <path to where setup.py is located>
+    #     pip install -e .
+        
+    # This will execute the setup.py file and insure that its pip-specific commands are run.
+    
     entry_points={
         'console_scripts': [
             'pyprotem=pyprotem.main:main',

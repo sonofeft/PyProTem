@@ -1,6 +1,28 @@
 import unittest
 # import unittest2 as unittest # for versions of python < 2.7
 
+"""
+        Method                  Checks that
+self.assertEqual(a, b)           a == b   
+self.assertNotEqual(a, b)        a != b   
+self.assertTrue(x)               bool(x) is True  
+self.assertFalse(x)              bool(x) is False     
+self.assertIs(a, b)              a is b
+self.assertIsNot(a, b)           a is not b
+self.assertIsNone(x)             x is None 
+self.assertIsNotNone(x)          x is not None 
+self.assertIn(a, b)              a in b
+self.assertNotIn(a, b)           a not in b
+self.assertIsInstance(a, b)      isinstance(a, b)  
+self.assertNotIsInstance(a, b)   not isinstance(a, b)  
+
+See:
+      https://docs.python.org/2/library/unittest.html
+         or
+      https://docs.python.org/dev/library/unittest.html
+for more assert options
+"""
+
 import sys, os
 sys.path.append(os.path.abspath("."))
 sys.path.append(os.path.abspath("../"))
