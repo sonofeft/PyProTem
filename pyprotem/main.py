@@ -77,7 +77,7 @@ class ProTem(object):
         """Inits ProTem with blah."""
         self.likes_spam = True
         self.eggs = 3
-        print "Hi"
+        print( "Hi" )
 
     def public_method(self, arg1, arg2, mykey=True):
         """Performs operation blah.
