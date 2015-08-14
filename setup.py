@@ -83,7 +83,7 @@ setup(
     # simple. Or you can use find_packages().
     
     packages=find_packages('pyprotem', 
-        exclude=['.tox', '.hg', 'docs', 'tests', '*.rst']),
+        exclude=['.tox', '.hg', 'docs']),
     package_dir = {'pyprotem':''},
 
     # List run-time dependencies here.  These will be installed by pip when
@@ -97,7 +97,8 @@ setup(
     #],
     install_requires=['future'],
 
-    tests_require=['pytest'],
+    tests_require=['nose'],
+    test_suite='tests', # allows "setup.py test" to work
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
