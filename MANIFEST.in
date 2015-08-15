@@ -1,14 +1,13 @@
-include *.rst
-include *.txt
+include README.rst
+include LICENSE.txt
 include setup.cfg
-include tk_nosy.py
-recursive-exclude tests __pycache__ *
+#  include tk_nosy.py
 recursive-include tests *.py
-graft examples
+#  recursive-include examples *.txt *.rst *.py
 
 # The manifest template commands are:
 
-# Command                                        Description
+#       Command                                  Description
 # include pat1 pat2 ...                include all files matching any of the listed patterns
 # exclude pat1 pat2 ...                exclude all files matching any of the listed patterns
 # recursive-include dir pat1 pat2 ...  include all files under dir matching any of the listed patterns

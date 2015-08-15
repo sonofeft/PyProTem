@@ -27,13 +27,14 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.1.1',
+    version = '0.1.3',  # METADATA_RESET:    version = '<<version>>',
 
     description='PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/pypa/pyprotem',
+    url='http://pyprotem.readthedocs.org/en/latest/',
+    download_url='https://github.com/sonofeft/PyProTem',
 
     # Author details
     author='Charlie Taylor',
@@ -48,7 +49,7 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: Development',
+        'Development Status :: 4 - Beta',
 
         "Operating System :: OS Independent",
 
@@ -57,11 +58,9 @@ setup(
         "Intended Audience :: End Users/Desktop",
 
         'Topic :: Software Development :: Build Tools',
-        "Topic :: Office/Business :: Financial",
-        "Topic :: Security :: Cryptography",
 
         # Pick your license as you wish (should match "license" above)
-        'License :: OSI Approved :: GPL-3 License',
+        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
@@ -84,7 +83,7 @@ setup(
     
     packages=find_packages('pyprotem', 
         exclude=['.tox', '.hg', 'docs']),
-    package_dir = {'pyprotem':''},
+    #package_dir = {'pyprotem':''},
 
     # List run-time dependencies here.  These will be installed by pip when
     # your project is installed. For an analysis of "install_requires" vs pip's
@@ -97,7 +96,7 @@ setup(
     #],
     install_requires=['future'],
 
-    tests_require=['nose'],
+    tests_require=['nose','coverage'],
     test_suite='tests', # allows "setup.py test" to work
 
     # List additional groups of dependencies here (e.g. development

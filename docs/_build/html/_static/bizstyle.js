@@ -36,6 +36,6 @@ $(window).resize(function(){
         $("li.nav-item-0 a").text("Top");
     }
     else {
-        $("li.nav-item-0 a").text("PyProTem 0.0.1 documentation");
+        $("li.nav-item-0 a").text("PyProTem 0.1.3 documentation");
     }
 });

@@ -30,6 +30,13 @@ The layout is shown below::
 
 Use PyProTem to test tox usage locally, travis CI on GitHub on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3.
 
+Docs and Source
+===============
+
+Find the documentation at: `<http://pyprotem.readthedocs.org/en/latest/>`_
+
+Find the source code at: `<https://github.com/sonofeft/PyProTem>`_
+
 Installation From Source
 ========================
 
