@@ -10,10 +10,14 @@ Testing the layout shown below::
         myproject/
             __init__.py
             main.py
+            examples/
+                example_1.py
+            tests/
+                __init__.py
+                test_mycode.py
         docs/
-        tests/
-            __init__.py
-            test_mycode.py
+            conf.py
+            index.rst
         LICENSE.txt
         MANIFEST.in
         README.rst

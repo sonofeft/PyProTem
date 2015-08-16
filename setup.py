@@ -6,11 +6,10 @@ https://github.com/pypa/pyprotem
 """
 
 # Always prefer setuptools over distutils
-#try:
-from setuptools import find_packages
-from numpy.distutils.core import setup
-#except ImportError:
-#    from distutils.core import setup, find_packages
+try:
+    from setuptools import setup, find_packages
+except ImportError:
+    from distutils.core import setup, find_packages
 
 # To use a consistent encoding
 from codecs import open
@@ -28,7 +27,7 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version = '0.1.17',  # METADATA_RESET:    version = '<<version>>',
+    version = '0.1.7',  # METADATA_RESET:    version = '<<version>>',
 
     description='PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.',
     long_description=long_description,
@@ -115,9 +114,9 @@ setup(
     # If there are data files included in your packages that need to be
     # installed, use MANIFEST.in to specify them, NOT package_data
     # >>>>> USE MANIFEST.in, NOT package_data <<<<<< NOTE <<<<<<<<
-    package_data={
-        'pyprotem': ['examples/*'],
-    },
+    #package_data={
+    #    'pyprotem': ['package_data.dat'],
+    #},
 
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
