@@ -6,10 +6,11 @@ https://github.com/pypa/pyprotem
 """
 
 # Always prefer setuptools over distutils
-try:
-    from setuptools import setup, find_packages
-except ImportError:
-    from distutils.core import setup, find_packages
+#try:
+from setuptools import find_packages
+from numpy.distutils.core import setup
+#except ImportError:
+#    from distutils.core import setup, find_packages
 
 # To use a consistent encoding
 from codecs import open
@@ -27,7 +28,7 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version = '0.1.3',  # METADATA_RESET:    version = '<<version>>',
+    version = '0.1.17',  # METADATA_RESET:    version = '<<version>>',
 
     description='PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.',
     long_description=long_description,
@@ -81,9 +82,10 @@ setup(
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
     
-    packages=find_packages('pyprotem', 
-        exclude=['.tox', '.hg', 'docs']),
+    packages=find_packages(exclude=['.tox', '.hg', 'docs']),
     #package_dir = {'pyprotem':''},
+    
+    include_package_data = True,
 
     # List run-time dependencies here.  These will be installed by pip when
     # your project is installed. For an analysis of "install_requires" vs pip's
@@ -103,17 +105,19 @@ setup(
     # dependencies). You can install these using the following syntax,
     # for example:
     # $ pip install -e .[dev,test]
-    extras_require={
-        'dev': ['check-manifest'],
-        'test': ['coverage'],
-    },
+    #extras_require={
+    #    'dev': ['check-manifest'],
+    #    'test': ['coverage'],
+    #},
+    
+    zip_safe= False,
 
     # If there are data files included in your packages that need to be
-    # installed, specify them here.  If using Python 2.6 or less, then these
-    # have to be included in MANIFEST.in as well.
-    #package_data={
-    #    'pyprotem': ['package_data.dat'],
-    #},
+    # installed, use MANIFEST.in to specify them, NOT package_data
+    # >>>>> USE MANIFEST.in, NOT package_data <<<<<< NOTE <<<<<<<<
+    package_data={
+        'pyprotem': ['examples/*'],
+    },
 
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
@@ -133,9 +137,9 @@ setup(
         
     # This will execute the setup.py file and insure that its pip-specific commands are run.
     
-    entry_points={
-        'console_scripts': [
-            'pyprotem=pyprotem.main:main',
-        ],
-    },
+    #entry_points={
+    #    'console_scripts': [
+    #        'pyprotem=pyprotem.main:main',
+    #    ],
+    #},
 )

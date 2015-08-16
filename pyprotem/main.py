@@ -50,7 +50,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 __author__ = 'Charlie Taylor'
 __copyright__ = 'Copyright (c) 2015 Charlie Taylor'
 __license__ = 'GPL-3'
-__version__ = '0.1.1' #Versioning: http://www.python.org/dev/peps/pep-0386/
+__version__ = '0.1.17'  # METADATA_RESET:__version__ = '<<version>>'
 __email__ = "charlietaylor@users.sourceforge.net"
 __status__ = "Development" # "Prototype", "Development", or "Production"
 
