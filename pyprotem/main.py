@@ -71,7 +71,8 @@ class ProTem(object):
     Longer class information....
     Longer class information....
 
-    Attributes:
+    Attributes::
+    
         likes_spam: A boolean indicating if we like SPAM or not.
 
         eggs: An integer count of the eggs we have laid.

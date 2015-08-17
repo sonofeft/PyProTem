@@ -4,6 +4,7 @@ include setup.cfg
 include tk_nosy.py
 graft pyprotem
 recursive-include pyprotem/examples *
+recursive-include pyprotem/tests *
 prune */__pycache__
 global-exclude *.py[co]
 
