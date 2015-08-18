@@ -3,7 +3,10 @@
    sphinx-quickstart on Mon Jul 06 00:15:47 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-
+   
+.. image:: https://travis-ci.org/sonofeft/PyProTem.svg?branch=master
+    :target: https://travis-ci.org/sonofeft/PyProTem
+    
 PyProTem
 ========
 
