@@ -39,7 +39,7 @@ class MyTest(unittest.TestCase):
         del( self.myclass )
 
     def test_should_always_pass_cleanly(self):
-        """Should always pass cleanly."""
+        """Should always pass pyprotem exists cleanly."""
         pass
 
     def test_myclass_existence(self):

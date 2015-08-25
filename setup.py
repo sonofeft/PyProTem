@@ -74,6 +74,6 @@ setup(
     install_requires=['future'],
 
     tests_require=['nose','coverage'],
-    test_suite='tests', # allows "setup.py test" to work
+    test_suite='pyprotem.tests', # allows "setup.py test" to work
     zip_safe= False,
 )
