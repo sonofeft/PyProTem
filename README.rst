@@ -1,5 +1,5 @@
-Pyprotem acts as a temporary project for the time being to test tox, travis, futurize, etc.
-===========================================================================================
+Pyprotem acts as a temporary project used to test tox, travis, futurize, etc.
+=============================================================================
 
 .. image:: https://travis-ci.org/sonofeft/PyProTem.svg?branch=master
     :target: https://travis-ci.org/sonofeft/PyProTem
