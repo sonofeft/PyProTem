@@ -48,15 +48,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ---------------------
 """
+import os
+here = os.path.abspath(os.path.dirname(__file__))
+
 
 # for multi-file projects see LICENSE file for authorship info
 # for single file projects, insert following information
 __author__ = 'Charlie Taylor'
 __copyright__ = 'Copyright (c) 2015 Charlie Taylor'
 __license__ = 'GPL-3'
-__version__ = '0.1.17'  # METADATA_RESET:__version__ = '<<version>>'
+exec( open(os.path.join( here,'_version.py' )).read() )  # creates local __version__ variable
 __email__ = "charlietaylor@users.sourceforge.net"
-__status__ = "Development" # "Prototype", "Development", or "Production"
+__status__ = "4 - Beta" # "3 - Alpha", "4 - Beta", "5 - Production/Stable"
 
 #
 # import statements here. (built-in first, then 3rd party, then yours)
@@ -104,7 +107,8 @@ class ProTem(object):
         
         .. todo:: blabla  many miles to go
         """
-        pass
+        #  Answer to the Ultimate Question of Life, The Universe, and Everything
+        return 42
 
 if __name__ == '__main__':
     C = ProTem()

@@ -1,13 +1,16 @@
 include *.rst
 include *.txt
 include setup.cfg
-include tk_nosy.py
+include .travis.yml tox.ini
+
 graft pyprotem
 recursive-include pyprotem/examples *
 recursive-include pyprotem/tests *
 prune */__pycache__
 global-exclude *.py[co]
 
+# for data files use something like:
+#  recursive-include pyprotem/<data_directory> *
 
 # The manifest template commands are:
 

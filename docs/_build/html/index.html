@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>PyProTem &mdash; PyProTem 0.1.17 documentation</title>
+    <title>PyProTem &mdash; PyProTem 0.1.3 documentation</title>
     
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1.17',
+        VERSION:     '0.1.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,8 +25,9 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="PyProTem 0.1.17 documentation" href="#" />
-    <link rel="next" title="Project Layout" href="project_layout.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="top" title="PyProTem 0.1.3 documentation" href="#" />
+    <link rel="next" title="QuickStart" href="quickstart.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -43,30 +44,34 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="project_layout.html" title="Project Layout"
+          <a href="quickstart.html" title="QuickStart"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">PyProTem 0.1.17 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">PyProTem 0.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="#">
-              <img class="logo" src="_static/PythonSphinxlogo.png" alt="Logo"/>
+              <img class="logo" src="_static/pyprotem_logo.svg" alt="Logo"/>
             </a></p>
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="project_layout.html">Project Layout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="read_the_docs.html">Read the Docs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tox.html">tox automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pip.html">pip Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="travis_ci.html">Travis CI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">Full Table of Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">Code Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">PyProTem Code Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
 </ul>
 
   <h4>Next topic</h4>
-  <p class="topless"><a href="project_layout.html"
-                        title="next chapter">Project Layout</a></p>
+  <p class="topless"><a href="quickstart.html"
+                        title="next chapter">QuickStart</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -95,18 +100,26 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="pyprotem">
+  <a class="reference external image-reference" href="https://travis-ci.org/sonofeft/PyProTem"><img alt="https://travis-ci.org/sonofeft/PyProTem.svg?branch=master" src="https://travis-ci.org/sonofeft/PyProTem.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/pyprotem"><img src="https://img.shields.io/pypi/v/PyProTem.svg" /></a>
+<a class="reference external image-reference" href="https://wiki.python.org/moin/Python2orPython3"><img src="https://img.shields.io/pypi/pyversions/PyProTem.svg" /></a>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/pyprotem"><img src="https://img.shields.io/pypi/l/PyProTem.svg" /></a>
+<div class="section" id="pyprotem">
 <h1>PyProTem<a class="headerlink" href="#pyprotem" title="Permalink to this headline">¶</a></h1>
 <p>PyProTem acts as a temporary project to test tox, travis, futurize, etc.</p>
-<p>The layout is shown below:</p>
-<div class="highlight-python"><div class="highlight"><pre>PyProTem/
-    pyprotem/
+<p>Testing the layout shown below:</p>
+<div class="highlight-python"><div class="highlight"><pre>MyProject/
+    myproject/
         __init__.py
-        main.py
+        mycode.py
+        examples/
+            example_1.py
+        tests/
+            __init__.py
+            test_mycode.py
     docs/
-    tests/
-        __init__.py
-        test_mycode.py
+        conf.py
+        index.rst
     LICENSE.txt
     MANIFEST.in
     README.rst
@@ -117,58 +130,20 @@
     tox.ini
 </pre></div>
 </div>
-<p>Use PyProTem to test tox usage locally, travis CI on GitHub on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3.</p>
+<p>Use pyProTem to test tox usage locally, travis CI on GitHub on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3.</p>
 </div>
-<div class="section" id="docs-and-source">
-<h1>Docs and Source<a class="headerlink" href="#docs-and-source" title="Permalink to this headline">¶</a></h1>
-<p>Find the documentation at: <a class="reference external" href="http://pyprotem.readthedocs.org/en/latest/">http://pyprotem.readthedocs.org/en/latest/</a></p>
-<p>Find the source code at: <a class="reference external" href="https://github.com/sonofeft/PyProTem">https://github.com/sonofeft/PyProTem</a></p>
-</div>
-<div class="section" id="installation-from-source">
-<h1>Installation From Source<a class="headerlink" href="#installation-from-source" title="Permalink to this headline">¶</a></h1>
-<p>If installing from source, then
-the best way to install PyProTem is to use pip after navigating to the directory holding PyProTem:</p>
-<div class="highlight-python"><div class="highlight"><pre>cd full/path/to/PyProTem
-pip install -e .
-
-OR on Linux
-sudo pip install -e .
-</pre></div>
-</div>
-<p>This will execute the local <code class="docutils literal"><span class="pre">setup.py</span></code> file and insure that the pip-specific commands in <code class="docutils literal"><span class="pre">setup.py</span></code> are run.</p>
-<p>May need to install from requirements.txt if the above does not work:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install -r /path/to/requirements.txt
-</pre></div>
-</div>
-<p>For installing tkinter, I could never get pip to work on Linux, so use the following:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install python-tk
-sudo apt-get install python3-tk
-
-sudo apt-get install python-nose
-sudo apt-get install python3-nose
-</pre></div>
-</div>
-<div class="section" id="python-3-on-linux">
-<h2>Python 3 on Linux<a class="headerlink" href="#python-3-on-linux" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
-<div class="section" id="copyright">
-<h1>Copyright<a class="headerlink" href="#copyright" title="Permalink to this headline">¶</a></h1>
-<p>PyProTem
-Copyright (C) 2015  Charlie Taylor</p>
-<p>This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.</p>
-<p>This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.</p>
-<p>You should have received a copy of the GNU General Public License
-along with this program.  If not, see &lt;<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</p>
+<div class="section" id="id1">
+<h1>PyProTem<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#install-pyprotem">Install PyProTem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#installation-from-source">Installation From Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#running-pyprotem">Running PyProTem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#pip-error-messages">pip Error Messages</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="project_layout.html">Project Layout</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="project_layout.html#test-discovery">Test Discovery</a></li>
 </ul>
@@ -202,7 +177,21 @@ along with this program.  If not, see &lt;<a class="reference external" href="ht
 <li class="toctree-l2"><a class="reference internal" href="fulltable_of_contents.html#sphinxcontrib-fulltoc">sphinxcontrib-fulltoc</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">Code Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">PyProTem Code Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="copyright.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="authors.html#development-lead">Development Lead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authors.html#patches-and-ideas">Patches and Ideas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="authors.html#initial-project-layout">Initial Project Layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="history.html#github-log">GitHub Log</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -231,13 +220,13 @@ along with this program.  If not, see &lt;<a class="reference external" href="ht
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="project_layout.html" title="Project Layout"
+          <a href="quickstart.html" title="QuickStart"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">PyProTem 0.1.17 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">PyProTem 0.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2015, Charlie Taylor.
+        &copy; <a href="copyright.html">Copyright</a> 2015, Charlie Taylor.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

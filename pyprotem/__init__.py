@@ -1,2 +1,5 @@
+import os
 
-__version__ = '0.1.17'  # METADATA_RESET:__version__ = '<<version>>'
+here = os.path.abspath(os.path.dirname(__file__))
+
+exec( open(os.path.join( here,'_version.py' )).read() )  # creates local __version__ variable

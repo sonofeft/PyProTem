@@ -1,8 +1,8 @@
 
 .. functions
 
-Code Functions
-==============
+PyProTem Code Functions
+=======================
 
 .. automodule:: pyprotem.main
    :members:

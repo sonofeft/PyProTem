@@ -1,9 +1,14 @@
+"""
+This example demonstrates the proper use of project: pyprotem
+"""
+import sys
+import os
 
+sys.path.insert(0, os.path.abspath("../../"))  # needed to find pyprotem development version
 
-import sys, os
-sys.path.append(os.path.abspath("."))
-sys.path.append(os.path.abspath("../"))
 from pyprotem.main import ProTem
 
-myclass = ProTem()
+# TODO: create working example of project pyprotem
+
+my_class = ProTem()
 

@@ -24,8 +24,14 @@ for more assert options
 """
 
 import sys, os
-sys.path.append(os.path.abspath("."))
-sys.path.append(os.path.abspath("../"))
+
+here = os.path.abspath(os.path.dirname(__file__)) # Needed for py.test
+up_one = os.path.split( here )[0]  # Needed to find pyprotem development version
+if here not in sys.path[:2]:
+    sys.path.insert(0, here)
+if up_one not in sys.path[:2]:
+    sys.path.insert(0, up_one)
+
 from pyprotem.main import ProTem
 
 class MyTest(unittest.TestCase):
@@ -39,7 +45,7 @@ class MyTest(unittest.TestCase):
         del( self.myclass )
 
     def test_should_always_pass_cleanly(self):
-        """Should always pass pyprotem exists cleanly."""
+        """Should always pass cleanly."""
         pass
 
     def test_myclass_existence(self):

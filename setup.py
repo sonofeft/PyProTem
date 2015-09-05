@@ -1,9 +1,19 @@
-"""A setuptools based setup module.
+"""A setuptools based setup module for PyProTem
 
-Find the documentation at: http://pyprotem.readthedocs.org/en/latest/
-Find the source code at:   https://github.com/sonofeft/PyProTem
+See:
+http://pyprotem.readthedocs.org/en/latest/
+https://github.com/sonofeft/PyProTem
+
+If installing from source, then
+the best way to install PyProTem is to use pip after navigating to the source directory::
+
+    cd <path to where setup.py is located>
+    pip install -e .
+    
+This will execute the setup.py file and insure that its pip-specific commands are run.
 
 """
+
 
 # Always prefer setuptools over distutils
 try:
@@ -21,40 +31,46 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
+# Place install_requires into the text file "requirements.txt"
+with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f2:
+    requires = f2.read().strip().splitlines()
+
+target_file = path.join( here, 'pyprotem','_version.py')
+exec( open( target_file ).read() )  # creates local __version__ variable
+
+
 setup(
     name='pyprotem',
+    version = __version__,  # METADATA_RESET:    version = '<<version>>',
 
-    version = '0.1.7',  # METADATA_RESET:    version = '<<version>>',
-
-    description='PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.',
-    long_description=long_description,
+    description = 'PyProTem acts as a temporary project for test purposes.',
+    long_description = long_description,
 
     # The project's main homepage.
     url='http://pyprotem.readthedocs.org/en/latest/',
     download_url='https://github.com/sonofeft/PyProTem',
 
     # Author details
-    author='Charlie Taylor',
-    author_email='cet@appliedpython.com',
+    author = 'Charlie Taylor',
+    author_email = 'cet@appliedpython.com',
 
     # license
-    license='GPL-3',
+    license = 'GPL-3',
 
-    # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
-    classifiers=[
-        # How mature is this project? Common values are
-        #   3 - Alpha
-        #   4 - Beta
-        #   5 - Production/Stable
+    classifiers = [
+        # Common status values are: "3 - Alpha", "4 - Beta", "5 - Production/Stable"
         'Development Status :: 4 - Beta',
+
         "Operating System :: OS Independent",
         'Intended Audience :: Developers',
         "Intended Audience :: End Users/Desktop",
         'Topic :: Software Development :: Build Tools',
 
-        # Pick your license as you wish (should match "license" above)
-        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        # This license should match "license" above
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
 
+        # Specify the Python versions you support here. In particular, ensure
+        # that you indicate whether you support Python 2, Python 3 or both.
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
@@ -64,16 +80,38 @@ setup(
         'Programming Language :: Python :: 3.4',
     ],
 
-    platforms='any',
-    keywords='pyprotem setuptools development tox travisci nose nosetests',
+    platforms = 'any',
 
-    packages=find_packages(exclude=['.tox', '.hg', 'docs']),
-    include_package_data = True,
+    # What does your project relate to?
+    keywords = 'pyprotem setuptools development',
+
+    packages = find_packages(exclude=['.tox', '.hg', 'docs']),
 
     # List run-time dependencies here.  These will be installed by pip when
-    install_requires=['future'],
+    # your project is installed. 
+    install_requires = requires,  # read from requirements.txt
 
-    tests_require=['nose','coverage'],
+    tests_require = ['nose','coverage'], # ...OR... ['pytest','pytest-cov']
     test_suite='pyprotem.tests', # allows "setup.py test" to work
+
+    # List additional groups of dependencies here (e.g. development
+    # dependencies). You can install these using the following syntax,
+    # for example:
+    # $ pip install -e .[dev,test]
+    extras_require = {
+        'dev': ['check-manifest'],
+        'test': ['coverage'],
+    },
+    
     zip_safe= False,
+
+    # To provide executable scripts, use entry points in preference to the
+    # "scripts" keyword. Entry points provide cross-platform support and allow
+    # pip to create the appropriate form of executable for the target platform.
+    
+    #entry_points = {
+    #    'console_scripts': [
+    #        'pyprotem=pyprotem.main:main',
+    #    ],
+    #},
 )

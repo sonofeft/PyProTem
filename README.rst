@@ -1,8 +1,21 @@
-Pyprotem acts as a temporary project for the time being to test tox, travis, futurize, etc.
-===========================================================================================
 
 .. image:: https://travis-ci.org/sonofeft/PyProTem.svg?branch=master
     :target: https://travis-ci.org/sonofeft/PyProTem
+
+.. image:: https://img.shields.io/pypi/v/PyProTem.svg
+    :target: https://pypi.python.org/pypi/pyprotem
+        
+.. image:: https://img.shields.io/pypi/pyversions/PyProTem.svg
+    :target: https://wiki.python.org/moin/Python2orPython3
+
+.. image:: https://img.shields.io/pypi/l/PyProTem.svg
+    :target: https://pypi.python.org/pypi/pyprotem
+
+
+PyProTem
+========
+
+PyProTem acts as a temporary project to test tox, travis, futurize, etc.
 
 Testing the layout shown below::
 

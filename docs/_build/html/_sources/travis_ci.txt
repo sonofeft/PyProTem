@@ -30,7 +30,7 @@ My baseline .travis.yml file seemed to work just fine::
         - "3.4"
 
     install:
-        - pip install -r requirements.txt --use-mirrors
+        - pip install -r requirements.txt
     script:
         - py.test
     

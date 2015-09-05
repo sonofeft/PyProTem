@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Code Functions &mdash; PyProTem 0.1.17 documentation</title>
+    <title>PyProTem Code Functions &mdash; PyProTem 0.1.3 documentation</title>
     
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1.17',
+        VERSION:     '0.1.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,9 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="PyProTem 0.1.17 documentation" href="index.html" />
+    <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="top" title="PyProTem 0.1.3 documentation" href="index.html" />
+    <link rel="next" title="Copyright" href="copyright.html" />
     <link rel="prev" title="Full Table of Contents" href="fulltable_of_contents.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
@@ -43,30 +45,40 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
+          <a href="copyright.html" title="Copyright"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
           <a href="fulltable_of_contents.html" title="Full Table of Contents"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.1.17 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/PythonSphinxlogo.png" alt="Logo"/>
+              <img class="logo" src="_static/pyprotem_logo.svg" alt="Logo"/>
             </a></p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="project_layout.html">Project Layout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="read_the_docs.html">Read the Docs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tox.html">tox automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pip.html">pip Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="travis_ci.html">Travis CI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fulltable_of_contents.html">Full Table of Contents</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Code Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">PyProTem Code Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="fulltable_of_contents.html"
                         title="previous chapter">Full Table of Contents</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="copyright.html"
+                        title="next chapter">Copyright</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -96,44 +108,14 @@
           <div class="body" role="main">
             
   <div class="section" id="module-pyprotem.main">
-<span id="code-functions"></span><h1>Code Functions<a class="headerlink" href="#module-pyprotem.main" title="Permalink to this headline">¶</a></h1>
-<p>PyProTem acts as a temporary project to test tox, travis, futurize, etc.</p>
-<p>Testing the layout shown below:</p>
-<div class="highlight-python"><div class="highlight"><pre>MyProject/
-    myproject/
-        __init__.py
-        main.py
-        examples/
-            example_1.py
-        tests/
-            __init__.py
-            test_mycode.py
-    docs/
-        conf.py
-        index.rst
-    LICENSE.txt
-    MANIFEST.in
-    README.rst
-    requirements.txt
-    setup.cfg
-    setup.py
-    tk_nosy.py
-    tox.ini
+<span id="pyprotem-code-functions"></span><h1>PyProTem Code Functions<a class="headerlink" href="#module-pyprotem.main" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">_version.py</span></code> file can be executed with execfile to create a local variable __version__:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="nb">execfile</span><span class="p">(</span><span class="s">&#39;_version.py&#39;</span><span class="p">)</span>             <span class="c"># python 2.x</span>
+<span class="k">exec</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&#39;_version.py&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>    <span class="c"># python 3.x</span>
 </pre></div>
 </div>
-<p>Use PyProTem to test tox usage locally, travis CI on GitHub on checkin, tk_nosy to watch files locally and alert breakage, operation under both python 2 and 3.</p>
-<p>PyProTem
-Copyright (C) 2015  Charlie Taylor</p>
-<p>This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.</p>
-<p>This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.</p>
-<p>You should have received a copy of the GNU General Public License
-along with this program.  If not, see &lt;<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</p>
+<p>creates local __version__ variable.</p>
+<p>Used to set version info throughout the project.</p>
 <hr class="docutils" />
 <dl class="class">
 <dt id="pyprotem.main.ProTem">
@@ -141,12 +123,12 @@ along with this program.  If not, see &lt;<a class="reference external" href="ht
 <dd><p>PyProTem acts as a temporary project for the time being to test tox, travis, futurize, etc.</p>
 <p>Longer class information....
 Longer class information....</p>
-<dl class="docutils">
-<dt>Attributes:</dt>
-<dd><p class="first">likes_spam: A boolean indicating if we like SPAM or not.</p>
-<p class="last">eggs: An integer count of the eggs we have laid.</p>
-</dd>
-</dl>
+<p>Attributes:</p>
+<div class="highlight-python"><div class="highlight"><pre>likes_spam: A boolean indicating if we like SPAM or not.
+
+eggs: An integer count of the eggs we have laid.
+</pre></div>
+</div>
 <dl class="method">
 <dt id="pyprotem.main.ProTem.public_method">
 <code class="descname">public_method</code><span class="sig-paren">(</span><em>arg1</em>, <em>arg2</em>, <em>mykey=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyprotem.main.ProTem.public_method" title="Permalink to this definition">¶</a></dt>
@@ -208,13 +190,16 @@ Longer class information....</p>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
+          <a href="copyright.html" title="Copyright"
+             >next</a> |</li>
+        <li class="right" >
           <a href="fulltable_of_contents.html" title="Full Table of Contents"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.1.17 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">PyProTem 0.1.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2015, Charlie Taylor.
+        &copy; <a href="copyright.html">Copyright</a> 2015, Charlie Taylor.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

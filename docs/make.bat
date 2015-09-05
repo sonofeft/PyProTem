@@ -74,6 +74,9 @@ if errorlevel 9009 (
 
 
 if "%1" == "html" (
+    echo.
+    echo       Running Command
+	echo %SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
 	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.

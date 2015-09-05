@@ -50,13 +50,11 @@ def render_file( full_file_name, metadataD ):
 if __name__ == "__main__":
     import os
     
-    metadataD =  {"<<version>>":"0.1.17"}
+    metadataD =  {"<<version>>":"0.1.18"}
 
-    render_file( os.path.abspath('./docs/conf.py'), metadataD )
-    render_file( os.path.abspath('./setup.py'), metadataD )
-    render_file( os.path.abspath('./pyprotem/__init__.py'), metadataD )
-    render_file( os.path.abspath('./pyprotem/main.py'), metadataD )
-
-    #render_file( os.path.abspath('./dummy.txt'), metadataD )
+    # render_file( os.path.abspath('./docs/conf.py'), metadataD )
+    # render_file( os.path.abspath('./setup.py'), metadataD )
+    render_file( os.path.abspath('./pyprotem/_version.py'), metadataD )
+    # render_file( os.path.abspath('./pyprotem/main.py'), metadataD )
     
     
