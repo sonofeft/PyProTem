@@ -22,11 +22,12 @@ from sphinx import addnodes
 appG, pagenameG = None, None
 
 def make_toctree(collapse=True):
-    return get_rendered_toctree(appG.builder,
-                                pagenameG,
-                                prune=False,
-                                collapse=collapse,
-                                )
+    rtn_val = get_rendered_toctree(appG.builder,
+                                   pagenameG,
+                                   prune=False,
+                                   collapse=collapse,
+                                   )
+    return rtn_val
 
 def html_page_context(app, pagename, templatename, context, doctree):
     """Event handler for the html-page-context signal.
