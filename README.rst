@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 Pyprotem acts as a temporary project used to test tox, travis, futurize, etc.
 =============================================================================
->>>>>>> origin/master
 
 .. image:: https://travis-ci.org/sonofeft/PyProTem.svg?branch=master
     :target: https://travis-ci.org/sonofeft/PyProTem
