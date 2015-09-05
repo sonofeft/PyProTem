@@ -19,6 +19,14 @@
 
 from sphinx import addnodes
 
+appG, pagenameG = None, None
+
+def make_toctree(collapse=True):
+    return get_rendered_toctree(appG.builder,
+                                pagenameG,
+                                prune=False,
+                                collapse=collapse,
+                                )
 
 def html_page_context(app, pagename, templatename, context, doctree):
     """Event handler for the html-page-context signal.
@@ -33,16 +41,13 @@ def html_page_context(app, pagename, templatename, context, doctree):
        document structure, ignores the maxdepth argument, and uses
        only prune and collapse.
     """
+    global appG, pagenameG
+    appG = app
+    pagenameG = pagename
+    
     rendered_toc = get_rendered_toctree(app.builder, pagename)
     context['toc'] = rendered_toc
     context['display_toc'] = True  # force toctree to display
-
-    def make_toctree(collapse=True):
-        return get_rendered_toctree(app.builder,
-                                    pagename,
-                                    prune=False,
-                                    collapse=collapse,
-                                    )
     context['toctree'] = make_toctree
 
 
