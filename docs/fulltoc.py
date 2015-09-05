@@ -19,6 +19,11 @@
 
 from sphinx import addnodes
 
+from sphinx.writers.html import HTMLTranslator
+
+class ConfJsonTranslator(HTMLTranslator):
+    pass
+    
 appG, pagenameG = None, None
 
 def make_toctree(collapse=True):
@@ -90,5 +95,6 @@ def build_full_toctree(builder, docname, prune, collapse):
 
 
 def setup(app):
+    app.set_translator('json', ConfJsonTranslator)
     app.connect('html-page-context', html_page_context)
 
