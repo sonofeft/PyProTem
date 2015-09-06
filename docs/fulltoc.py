@@ -16,23 +16,9 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-
+import sys
 from sphinx import addnodes
 
-from sphinx.writers.html import HTMLTranslator
-
-class ConfJsonTranslator(HTMLTranslator):
-    pass
-    
-appG, pagenameG = None, None
-
-def make_toctree(collapse=True):
-    rtn_val = get_rendered_toctree(appG.builder,
-                                   pagenameG,
-                                   prune=False,
-                                   collapse=collapse,
-                                   )
-    return rtn_val
 
 def html_page_context(app, pagename, templatename, context, doctree):
     """Event handler for the html-page-context signal.
@@ -47,14 +33,19 @@ def html_page_context(app, pagename, templatename, context, doctree):
        document structure, ignores the maxdepth argument, and uses
        only prune and collapse.
     """
-    global appG, pagenameG
-    appG = app
-    pagenameG = pagename
-    
     rendered_toc = get_rendered_toctree(app.builder, pagename)
     context['toc'] = rendered_toc
     context['display_toc'] = True  # force toctree to display
-    context['toctree'] = make_toctree
+
+    #def make_toctree(collapse=True):
+    #    result = get_rendered_toctree(app.builder,
+    #                                  pagename,
+    #                                  prune=False,
+    #                                  collapse=collapse,
+    #                                  )
+    #    #sys.__stderr__.write( 'From make_toctree, result =' + repr(result) )
+    #    return result
+    #context['toctree'] =  make_toctree
 
 
 def get_rendered_toctree(builder, docname, prune=False, collapse=True):
@@ -68,6 +59,7 @@ def get_rendered_toctree(builder, docname, prune=False, collapse=True):
                                  collapse=collapse,
                                  )
     rendered_toc = builder.render_partial(fulltoc)['fragment']
+    #sys.__stderr__.write( 'From get_rendered_toctree, rendered_toc =' + repr(rendered_toc))
     return rendered_toc
 
 
@@ -95,6 +87,5 @@ def build_full_toctree(builder, docname, prune, collapse):
 
 
 def setup(app):
-    app.set_translator('json', ConfJsonTranslator)
     app.connect('html-page-context', html_page_context)
 
