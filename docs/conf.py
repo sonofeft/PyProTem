@@ -47,9 +47,15 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
-    'sphinx.ext.ifconfig',
-    'fulltoc'
+    'sphinx.ext.ifconfig'
 ]
+
+    
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if on_rtd:
+    extensions.append( 'sphinxcontrib-fulltoc' )
+else:
+    extensions.append( 'fulltoc' )
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
